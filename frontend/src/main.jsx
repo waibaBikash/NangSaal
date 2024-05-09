@@ -8,7 +8,7 @@ import { StoreContext } from './context/StoreContext.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
   <StoreContext.Provider>
-  <App />
+   <App />
   </StoreContext.Provider>
   </BrowserRouter>
    
