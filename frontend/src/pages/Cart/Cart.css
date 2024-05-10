@@ -76,4 +76,14 @@
   background-color: black;
   border: none;
   color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media (max-width:750px) {
+  .cart-buttom{
+    flex-direction: column-reverse;
+  }
+  .cart-promocode{
+    justify-content: start;
+  }
 }
