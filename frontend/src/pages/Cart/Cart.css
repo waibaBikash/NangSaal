@@ -23,7 +23,7 @@
 .cart-items-item .cross{
   cursor: pointer;
 }
-.cart-buttom{
+.cart-bottom{
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
