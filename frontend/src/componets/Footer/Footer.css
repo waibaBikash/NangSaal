@@ -41,6 +41,9 @@
   background-color: gray;
   border: none;
 }
+.footer-content-left img{
+  height: 50px;
+}
 
 @media (max-width:750px) {
   .footer-content{
