@@ -44,7 +44,6 @@ const StoreContextProvider = (props) => {
             }
           }
           loadData();
-        
     },[])
 
   const contextValue = {
