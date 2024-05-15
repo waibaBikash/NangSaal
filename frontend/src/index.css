@@ -11,7 +11,7 @@ body{
   min-height: 100vh;
 }
 a {
-  text-transform: none;
+  text-decoration: none;
   color: inherit;
 }
 .app{
