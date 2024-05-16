@@ -1,8 +1,6 @@
-import { isTime } from "validator";
-import orderModel from "../models/orderModle";
+import orderModel from "../models/orderModle.js";
 import userModel from '../models/userModel.js';
 import Stripe from 'stripe';
-import { response } from "express";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -47,11 +45,12 @@ try {
        success_url:`${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
        cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}`
     })
-    response.json({success:true, session_url:session.url});
+    res.json({success:true, session_url:session.url});
 
 } catch (error) {
-  
-}
+  console.log(error);
+  res.json({success:false, message:"Error"});
+ }
 }
 
 export {placeOrder}
