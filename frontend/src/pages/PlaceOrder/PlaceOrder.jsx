@@ -28,7 +28,7 @@ const PlaceOrder = () => {
           food_list.map((item)=>{
            if(cartItems[item._id]>0){
             let itemInfo = item;
-            itemInfo["quality"] = cartItems[item._id];
+            itemInfo["quantity"] = cartItems[item._id];
             orderItems.push(itemInfo);
            }
           })

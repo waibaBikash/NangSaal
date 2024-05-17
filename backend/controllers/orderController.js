@@ -22,28 +22,29 @@ try {
    const line_items = req.body.items.map((item)=>({
      price_data:{
       currency:"dollar",
-      procucu_data:{
+      product_data:{
         name:item.name
       },
       unit_amount:item.price*100
      },
-      quentity:item.quentity
+      quantity:item.quantity
    }))
 
     line_items.push({
-      pirce_data:{
+      price_data:{
         currency:"dollar",
-        procucu_data:{
-          name:"Delivery charges"
+        product_data:{
+          name:"Delivery Charges"
         },
         unit_amount:4*100
       },
-      quentity:1
+      quantity:1
     })
     const session = await stripe.checkout.sessions.create({
+      line_items:line_items,
       mode:'payment',
        success_url:`${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
-       cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}`
+       cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}`,
     })
     res.json({success:true, session_url:session.url});
 
@@ -52,5 +53,20 @@ try {
   res.json({success:false, message:"Error"});
  }
 }
+const verifyOrder = async (req,res) => {
+   const { orderId,success} = res.body;
+   try {
+    if(success===true){
+       await orderModel.findByIdAndUpdate(orderId,{payment:true});
+       res.json({success:true, message:"Paid"});
+    }else{
+      await orderModel.findByIdAndDelete(orderId);
+      res.json({success:false, message:"Not Paid"});
+    }
+   } catch (error) {
+    console.log(error);
+    res.json({success:false, message:"Error"});
+   }
+}
 
-export {placeOrder}
+export {placeOrder,verifyOrder}
