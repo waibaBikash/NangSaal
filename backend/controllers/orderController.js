@@ -79,5 +79,16 @@ const userOrder = async (req,res) =>{
     res.json({success:false, message:"Error"});
   }
 }
+// listing order for admit pannel
+const listOrders = async (req,res) => {
+  try {
+    const orders = await orderModel.find({});
+    res.json({success:true, dta:orders});
+  } catch (error) {
+    console.log(error);
+    res.json({success:false, message:"Error"});
+  }
 
-export {placeOrder,verifyOrder,userOrder}
+}
+
+export {placeOrder,verifyOrder,userOrder,listOrders}
