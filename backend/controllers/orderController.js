@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // placing user order for frontend 
 const placeOrder = async (req,res) => {
- const frontend_url = "http://localhost:5174";
+ const frontend_url = "http://localhost:5173";
 
 try {
   const newOrder = new orderModel({
@@ -44,7 +44,7 @@ try {
       line_items:line_items,
       mode:'payment',
        success_url:`${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
-       cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}`,
+       cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}`
     })
     res.json({success:true, session_url:session.url});
 
@@ -54,7 +54,7 @@ try {
  }
 }
 const verifyOrder = async (req,res) => {
-   const { orderId,success} = res.body;
+   const { orderId,success} = req.body;
    try {
     if(success===true){
        await orderModel.findByIdAndUpdate(orderId,{payment:true});
@@ -83,7 +83,7 @@ const userOrder = async (req,res) =>{
 const listOrders = async (req,res) => {
   try {
     const orders = await orderModel.find({});
-    res.json({success:true, dta:orders});
+    res.json({success:true, data:orders});
   } catch (error) {
     console.log(error);
     res.json({success:false, message:"Error"});
@@ -91,7 +91,7 @@ const listOrders = async (req,res) => {
 
 }
 // api for updating order status
- const updataStatus = async (req, res) => {
+ const updateStatus = async (req, res) => {
     try {
       await orderModel.findByIdAndUpdate(req.body.orderId,{status:req.body.status});
       res.json({success:true, message:"Status Updated"});
@@ -100,4 +100,4 @@ const listOrders = async (req,res) => {
       res.json({success:false, message:"Error"});
     }
  }
-export {placeOrder,verifyOrder,userOrder,listOrders,updataStatus}
+export {placeOrder,verifyOrder,userOrder,listOrders,updateStatus}
