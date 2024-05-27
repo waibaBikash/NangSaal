@@ -20,8 +20,8 @@ const Cart = () => {
           </div>
           <br />
           <hr />
-          {food_list.map((item,index)=>{
-            if(cartItems[item._id]>0)
+          {food_list.map((item, index) => { 
+            if(cartItems[item._id] > 0 )
               {
                 return(
                  <div> 
@@ -67,7 +67,7 @@ const Cart = () => {
                               <button>Submit</button>
                          </div>
                     </div>
-                  </div>
+                </div>
           </div>
     </div>
   );

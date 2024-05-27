@@ -26,11 +26,13 @@ const PlaceOrder = () => {
     const placeOrder = async (event)=> {
           event.preventDefault();
           let orderItems = [];
+          console.log(food_list)
           food_list.map((item)=>{
            if(cartItems[item._id]>0){
             let itemInfo = item;
             itemInfo["quantity"] = cartItems[item._id];
             orderItems.push(itemInfo);
+            console.log(itemInfo)
            }
           })
         let orderData = {
@@ -39,6 +41,7 @@ const PlaceOrder = () => {
           amount:getTotalCartAmount()+4
         }
         let response = await axios.post(url+"/api/order/place", orderData,{headers:{token}});
+        console.log(response)
         if(response.data.success){
           const { session_url } = response.data;
           window.location.replace(session_url);
