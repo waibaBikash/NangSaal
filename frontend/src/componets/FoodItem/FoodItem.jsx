@@ -30,5 +30,4 @@ const FoodItem = ({id,name,price,description,image}) => {
     </div>
   )
 }
-
 export default FoodItem;
