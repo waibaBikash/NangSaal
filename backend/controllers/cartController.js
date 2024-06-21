@@ -51,6 +51,4 @@ const getCart = async (req, res) => {
   }
 
 }
-
-
 export {addToCart,removeFromCart,getCart}
