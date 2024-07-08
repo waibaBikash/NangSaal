@@ -9,7 +9,6 @@ import { StoreContext } from '../../context/StoreContext';
    const {getTotalCartAmount, token, setToken} = useContext(StoreContext);
 
    const navigate = useNavigate();
-
    const logout = () => {
      localStorage.removeItem("token");
      setToken("");
