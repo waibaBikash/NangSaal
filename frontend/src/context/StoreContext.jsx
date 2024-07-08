@@ -45,7 +45,6 @@ const StoreContextProvider = (props) => {
        const response = await axios.post(url+"/api/cart/get",{},{headers:{token}});
        setCartItems(response.data.cartData);
      }
-
     useEffect(()=>{
         async function loadData(){
           await fetchFoodList();
