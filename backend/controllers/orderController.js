@@ -88,7 +88,6 @@ const listOrders = async (req,res) => {
     console.log(error);
     res.json({success:false, message:"Error"});
   }
-
 }
 // api for updating order status
  const updateStatus = async (req, res) => {
