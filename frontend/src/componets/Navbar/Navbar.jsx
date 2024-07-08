@@ -15,7 +15,6 @@ const Navbar = ({setShowLogin}) => {
      setToken("");
      navigate("/");
    }
-
   return (
     <div className='navbar'>
       <Link to='/'><img src={assets.logo} alt="" className='logo' /> </Link>
