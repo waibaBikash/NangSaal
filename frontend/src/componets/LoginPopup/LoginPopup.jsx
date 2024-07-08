@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
 import axios from 'axios';
 
-const LoginPopup = ({setShowLogin}) => {
+  const LoginPopup = ({setShowLogin}) => {
   const {url, setToken} = useContext(StoreContext);
 
   const [currentState, setCurrentState] = useState("Login");
