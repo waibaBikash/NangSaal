@@ -23,8 +23,8 @@ function App() {
       <Route path='/verify' element={<Verify/>} />
       <Route path='/myorders' element={<MyOrders/>} />
      </Routes>
-    </div>
-    <Footer />
+     </div>
+     <Footer />
     </>
   )
 }
