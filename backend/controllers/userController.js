@@ -5,7 +5,8 @@ import validator from 'validator';
 
 
 // login user
-const loginUser = async (req, res) => {
+
+  const loginUser = async (req, res) => {
     const {email, password} = req.body;
     try {
       const user = await userModel.findOne({email});
