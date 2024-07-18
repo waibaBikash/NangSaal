@@ -13,4 +13,5 @@ const AppDownload = () => {
     </div>
   )
 }
+
 export default AppDownload;
