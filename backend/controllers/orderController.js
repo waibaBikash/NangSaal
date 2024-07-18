@@ -92,6 +92,7 @@ const listOrders = async (req,res) => {
   }
 }
 // api for updating order status
+
  const updateStatus = async (req, res) => {
     try {
       await orderModel.findByIdAndUpdate(req.body.orderId,{status:req.body.status});
