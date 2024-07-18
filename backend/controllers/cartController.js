@@ -34,7 +34,6 @@ const removeFromCart = async (req,res) => {
     res.json({success:false, message:"Error"});
   }
 }
-
 // fetch user cart data
 const getCart = async (req, res) => {
   try {
