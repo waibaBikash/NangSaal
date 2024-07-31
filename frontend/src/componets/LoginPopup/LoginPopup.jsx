@@ -59,5 +59,4 @@ import axios from 'axios';
     </div>
   )
 }
-
 export default LoginPopup;
