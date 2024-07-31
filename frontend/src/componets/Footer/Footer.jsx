@@ -33,9 +33,9 @@ const Footer = () => {
           </div>
        </div>
          <hr />
-         <p className="footer-copyright">
+           <p className="footer-copyright">
           Copyright NaangSaal 2024 © naangsaal.com - All Right Reserved.
-         </p>
+          </p>
     </div>
   );
 }
