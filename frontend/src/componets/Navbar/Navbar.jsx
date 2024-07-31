@@ -44,5 +44,4 @@ import { StoreContext } from '../../context/StoreContext';
     </div>
   );
 }
-
 export default Navbar;
