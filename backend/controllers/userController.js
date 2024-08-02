@@ -29,7 +29,6 @@ import validator from 'validator';
   const createToken = (id) => {
     return jwt.sign({id}, process.env.JWT_SECRET);
 }
-
 // register user
 
 const registerUser = async (req, res) => {
