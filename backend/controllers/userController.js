@@ -40,7 +40,7 @@ const registerUser = async (req, res) => {
       }
 
       // validating email format & strong password
-      
+
        if(!validator.isEmail(email)){
         return res.json({success:false, message:"Please enter a valid email"});
        }
@@ -50,6 +50,7 @@ const registerUser = async (req, res) => {
        }
 
        // hashing user password
+       
        const salt = await bcrypt.genSalt(10);
        const hashedPassword = await bcrypt.hash(password, salt);
 
