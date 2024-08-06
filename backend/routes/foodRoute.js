@@ -13,7 +13,6 @@ const storage = multer.diskStorage({
       return cb(null, `${Date.now()}${file.originalname}` )
    }
 })
-
 const upload = multer({storage:storage});
 
 foodRouter.post("/add", upload.single("image"), addFood);
