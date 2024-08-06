@@ -10,7 +10,8 @@ const orderSchema = new mongoose.Schema({
   payment:{type:Boolean,default:false}
 })
 
-const orderModel = mongoose.models.order || mongoose.model("order",orderSchema);
+const orderModel = mongoose.models.order || mongoose
+.model("order",orderSchema);
 
 
 
