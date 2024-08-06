@@ -11,5 +11,4 @@ orderRouter.post("/userordes", authMiddleware, userOrder);
 orderRouter.get("/list", listOrders);
 orderRouter.post("/status", updateStatus);
 
-
 export default orderRouter;
