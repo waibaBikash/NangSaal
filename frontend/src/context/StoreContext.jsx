@@ -74,4 +74,5 @@ export const StoreContext = createContext(null);
     </StoreContext.Provider>
   )
 }
+
 export default StoreContextProvider;
