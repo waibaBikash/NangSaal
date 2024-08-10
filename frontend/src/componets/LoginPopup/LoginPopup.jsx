@@ -45,7 +45,8 @@ import axios from 'axios';
        <form onSubmit={onLogin} className="login-popup-container">
           <div className="login-popup-title">
              <h2>{currentState}</h2>
-              <img onClick={()=>setShowLogin(false)} src={assets.cross_icon} alt="" />
+              <img onClick={()=>setShowLogin(false)} 
+              src={assets.cross_icon} alt="" />
           </div>
             <div className="login-popup-inputs">
               {currentState==="Login"?<></>:<input name='name' onChange={onChangeHandler} value={data.name}  type="text" placeholder='your name' required />}
