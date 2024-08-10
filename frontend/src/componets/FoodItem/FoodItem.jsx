@@ -40,5 +40,4 @@ const FoodItem = ({id,
   )
 }
 
-
 export default FoodItem;
