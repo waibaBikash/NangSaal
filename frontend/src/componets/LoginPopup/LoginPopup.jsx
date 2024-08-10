@@ -53,7 +53,8 @@ import axios from 'axios';
                value={data.name}  type="text" placeholder='your name' required />}
                <input name='email' onChange={onChangeHandler} value={data.email} 
                type="email" placeholder='your email' required />
-               <input name='password' onChange={onChangeHandler} value={data.password} type="password" placeholder='your password' required />
+               <input name='password' onChange={onChangeHandler} value={data.password} 
+               type="password" placeholder='your password' required />
             </div>
              <button type='submit'>{currentState==="Sign Up"?"Create account":"Login"}</button>
               <div className="login-popup-condition">
