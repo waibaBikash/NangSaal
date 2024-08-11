@@ -31,4 +31,5 @@ const Verify = () => {
     </div>
   )
 }
+
 export default Verify;
