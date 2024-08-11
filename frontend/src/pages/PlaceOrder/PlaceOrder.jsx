@@ -110,7 +110,9 @@ const PlaceOrder = () => {
                            <hr />
                            <div className="cart-total-details">
                               <b>Total</b>
-                               <b>${getTotalCartAmount()===0?0:getTotalCartAmount()+4}</b>
+                               <b>
+                                ${getTotalCartAmount()===0?0:getTotalCartAmount()+4}
+                               </b>
                            </div>
                       </div>
                        <button type='submit'>PROCEED TO PAYMENT</button>
