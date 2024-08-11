@@ -45,7 +45,8 @@ const PlaceOrder = () => {
           items:orderItems,
           amount:getTotalCartAmount()+4
         }
-        let response = await axios.post(url+"/api/order/place", orderData,{headers:{token}});
+        let response = await axios
+        .post(url+"/api/order/place", orderData,{headers:{token}});
         console.log(response);
         if(response.data.success){
           const { session_url } = response.data;
