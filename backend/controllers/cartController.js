@@ -18,6 +18,7 @@ const addToCart = async (req,res) => {
     res.json({success:false, message:"Error"});
   }
 }
+
 // remove items from user cart
 
 const removeFromCart = async (req,res) => {
