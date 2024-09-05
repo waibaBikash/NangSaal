@@ -7,7 +7,9 @@ const ExploreMenu = ({category,
   }) => {
   return (
     <div className='explore-menu' id='explore-menu'>
-    <h1>Explore Our Menu</h1>
+    <h1>
+      Explore Our Menu
+      </h1>
     <p className='explore-menu-text'>
       Choose from a diverse menu featuring a delectable array of deshes. 
       Our mission is to satisfy your craving and elevate your dining 
