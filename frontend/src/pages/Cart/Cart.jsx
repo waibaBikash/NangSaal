@@ -60,7 +60,9 @@ const Cart = () => {
                            <hr />
                            <div className="cart-total-details">
                               <b>Total</b>
-                               <b>${getTotalCartAmount()===0?0:getTotalCartAmount()+4}</b>
+                               <b>${getTotalCartAmount() === 0
+                               ? 0
+                               :getTotalCartAmount()+4}</b>
                            </div>
                       </div>
                        <button onClick={()=>nagigate('/order')}>
