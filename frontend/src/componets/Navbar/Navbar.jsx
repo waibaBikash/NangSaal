@@ -47,7 +47,8 @@ import { StoreContext } from '../../context/StoreContext';
                         <p>Orders</p></li>
                         <hr />
                         <li onClick={logout}>
-                          <img src={assets.logout_icon} alt="" /><p>Logout</p>
+                          <img src={assets.logout_icon} alt="" />
+                          <p>Logout</p>
                         </li>
                     </ul>
                   </div>}
