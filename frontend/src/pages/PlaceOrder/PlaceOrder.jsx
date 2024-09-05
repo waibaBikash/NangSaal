@@ -113,7 +113,9 @@ const PlaceOrder = () => {
                            <div className="cart-total-details">
                               <b>Total</b>
                                <b>
-                                ${getTotalCartAmount()===0?0:getTotalCartAmount()+4}
+                                ${getTotalCartAmount() === 0
+                                ? 0
+                                :getTotalCartAmount()+4}
                                </b>
                            </div>
                       </div>
