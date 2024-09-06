@@ -107,4 +107,4 @@ export {placeOrder,
   verifyOrder,
   userOrder,
   listOrders,
-  updateStatus}
+  updateStatus};
