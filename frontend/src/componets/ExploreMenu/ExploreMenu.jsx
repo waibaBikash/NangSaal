@@ -10,7 +10,8 @@ const ExploreMenu = ({category,
     <h1>
       Explore Our Menu
       </h1>
-    <p className='explore-menu-text'>
+    <p 
+      className='explore-menu-text'>
       Choose from a diverse menu featuring a delectable array of deshes. 
       Our mission is to satisfy your craving and elevate your dining 
       experience, one delicious meal at a time.
