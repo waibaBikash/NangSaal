@@ -26,8 +26,11 @@ const ExploreMenu = ({
              key={index}
              className="explore-menu-list-item">
                 <img  
-                 className={category===item.menu_name?"active":""}
-                 src={item.menu_image} alt="" />
+                 className={category===item.menu_name
+                  ?"active"
+                  :""}
+                 src={item.menu_image} alt="" 
+                 />
                 <p>
                   {item.menu_name}
                 </p>
