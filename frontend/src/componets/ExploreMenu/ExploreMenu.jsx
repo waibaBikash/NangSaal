@@ -16,7 +16,8 @@ const ExploreMenu = ({category,
       Our mission is to satisfy your craving and elevate your dining 
       experience, one delicious meal at a time.
     </p>
-      <div className="explore-menu-list">
+      <div
+         className="explore-menu-list">
          {menu_list.map((item, index)=>{
            return(
              <div onClick={()=>setCategory(prev=>prev===item.menu_name?"All":item.menu_name)}
