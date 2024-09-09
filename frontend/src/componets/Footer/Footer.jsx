@@ -51,7 +51,9 @@ const Footer = () => {
                <li>
                 +61-126644169
                 </li>
-               <li>nangsaal@gmail.com.au</li>
+               <li>
+                nangsaal@gmail.com.au
+                </li>
              </ul>
           </div>
        </div>
