@@ -42,7 +42,11 @@ import { StoreContext } from '../../context/StoreContext';
                   :"dot"}>
                   </div>
                </div>
-                 {!token?<button onClick={()=>setShowLogin(true)}>sign in</button>:
+                 {!token
+                 ?<button 
+                 onClick={()=>setShowLogin(true)}>sign in
+                 </button>
+                 :
                   <div className='navbar-profile'>
                    <img src={assets.profile_icon} alt="" />
                     <ul className="nav-profile-dropdown">
