@@ -79,7 +79,9 @@ import axios from 'axios';
              ?"Create account"
              :"Login"}</button>
               <div className="login-popup-condition">
-                 <input type="checkbox" required />
+                 <input 
+                 type="checkbox" required 
+                 />
                   <p>
                     By continuing, I agree to the terms of use & privacy policy.
                   </p>
