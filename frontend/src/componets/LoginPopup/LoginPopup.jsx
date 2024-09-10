@@ -74,7 +74,8 @@ import axios from 'axios';
                placeholder='your password'
                 required />
             </div>
-             <button type='submit'>{currentState==="Sign Up"
+             <button 
+             type='submit'>{currentState==="Sign Up"
              ?"Create account"
              :"Login"}</button>
               <div className="login-popup-condition">
