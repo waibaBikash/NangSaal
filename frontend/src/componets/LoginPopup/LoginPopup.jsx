@@ -42,7 +42,9 @@ import axios from 'axios';
   }
   return (
     <div className='login-popup'>
-       <form onSubmit={onLogin} className="login-popup-container">
+       <form 
+        onSubmit={onLogin}
+         className="login-popup-container">
           <div className="login-popup-title">
              <h2>{currentState}</h2>
               <img onClick={()=>setShowLogin(false)} 
