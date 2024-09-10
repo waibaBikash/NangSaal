@@ -51,8 +51,14 @@ import axios from 'axios';
               src={assets.cross_icon} alt="" />
           </div>
             <div className="login-popup-inputs">
-              {currentState==="Login"?<></>:<input name='name' onChange={onChangeHandler}
-               value={data.name}  type="text" placeholder='your name' required />}
+              {currentState==="Login"
+              ?<></>
+              :<input name='name'
+               onChange={onChangeHandler}
+               value={data.name} 
+                type="text"
+                 placeholder='your name'
+                  required />}
                <input 
                name='email' onChange={onChangeHandler} value={data.email} 
                type="email" placeholder='your email' required 
