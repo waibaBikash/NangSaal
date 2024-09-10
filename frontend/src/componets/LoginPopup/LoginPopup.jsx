@@ -60,8 +60,11 @@ import axios from 'axios';
                  placeholder='your name'
                   required />}
                <input 
-               name='email' onChange={onChangeHandler} value={data.email} 
-               type="email" placeholder='your email' required 
+               name='email'
+                onChange={onChangeHandler} 
+                value={data.email} 
+               type="email"
+                placeholder='your email' required 
                />
                <input 
                name='password' 
