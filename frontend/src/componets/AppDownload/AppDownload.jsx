@@ -8,7 +8,8 @@ const AppDownload = () => {
       <p>For Better Experience Download
          <br />NangSal App
       </p>
-       <div className="app-download-platforms">
+       <div 
+        className="app-download-platforms">
          <img src={assets.app_store} alt="" />
          <img src={assets.play_store} alt="" />
        </div>
