@@ -38,7 +38,8 @@ const FoodItem = ({
                  src={assets.rating_starts} alt="rating icon" 
                  />
            </div>
-             <p className="food-item-desc">   
+             <p 
+             className="food-item-desc">   
                  {description}
              </p>
              <p className="food-item-price">
