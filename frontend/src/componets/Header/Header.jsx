@@ -16,7 +16,7 @@ const Header = () => {
                the finest ingredients  and elevate your
                 dining experience, one dilicious meal at a time.
             </p>
-          <button>
+           <button>
             View Menu
             </button>
        </div>
