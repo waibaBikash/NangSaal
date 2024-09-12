@@ -19,7 +19,8 @@ import { StoreContext } from '../../context/StoreContext';
    }
   return (
     <div className='navbar'>
-      <Link to='/'><img src={assets.logo} alt=""
+      <Link to='/'><img 
+      src={assets.logo} alt=""
        className='logo' /> </Link>
         <ul className="navbar-menu">
            <Link to='/' onClick={()=>setMenu("home")} 
