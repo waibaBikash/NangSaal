@@ -92,7 +92,8 @@ import axios from 'axios';
                   Click here</span></p>
                   :<p>Already have an account? 
                     <span 
-                     onClick={()=>setCurrentState("Login")}>Login here
+                     onClick={()=>setCurrentState("Login")}>
+                      Login here
                      </span>
                   </p>}
        </form>
